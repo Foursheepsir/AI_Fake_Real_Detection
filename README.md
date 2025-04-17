@@ -106,3 +106,27 @@ The system provides:
   - Text length distributions
   - PCA projections
   - KMeans clustering results
+
+## Plot and Visualization
+Simply run the script
+```bash
+python plot.py
+```
+Running `plot.py` will generate: 
+
+BERT_bert_metrics.png\
+![image](BERT_bert_metrics.png)
+
+Logistic_Regression_tfidf_embed_metrics.png\
+![image](Logistic_Regression_tfidf_embed_metrics.png)
+
+SVM_tfidf_embed_metrics.png\
+![image](SVM_tfidf_embed_metrics.png)
+
+Random_Forest_tfidf_embed_metrics.pdf\
+![image](Random_Forest_tfidf_embed_metrics.png)
+
+Each file contains comparative bar charts for model performance.
+
+
+
