@@ -37,7 +37,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.svm import LinearSVC
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import classification_report, confusion_matrix, accuracy_score
-from sentence_transformers import SentenceTransformer, models
+from sentence_transformers import SentenceTransformer
 from datasets import load_dataset
 
 def clean_text(text):
@@ -277,8 +277,8 @@ def analyze_data(df_true, df_fake, df_neural):
     plt.title("Text Length Distribution")
     plt.xlabel("Text Length")
     plt.ylabel("Frequency")
-    plt.show()
-    
+    plt.savefig("text_length_distribution.png")
+
     return df_true, df_fake, df_neural
 
 def visualize_data(X, y, le):
@@ -313,7 +313,7 @@ def visualize_data(X, y, le):
     plt.ylabel("PCA 2")
     plt.legend(title='Source')
     plt.grid(True)
-    plt.show()
+    plt.savefig("true_label_distribution.png")
     
     # Plot KMeans clustering results
     plt.figure(figsize=(10, 6))
@@ -324,7 +324,7 @@ def visualize_data(X, y, le):
     plt.ylabel("PCA 2")
     plt.legend(title='Cluster')
     plt.grid(True)
-    plt.show()
+    plt.savefig("kmeans_clustering_results.png")
 
 def main():
     """
