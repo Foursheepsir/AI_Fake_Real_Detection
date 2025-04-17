@@ -39,15 +39,16 @@ This project implements a sophisticated news classification system that:
 
 - Python 3.7+
 - Dependencies listed in `requirements.txt`:
-  - pandas >= 1.3.0
-  - numpy >= 1.21.0
-  - matplotlib >= 3.4.0
-  - seaborn >= 0.11.0
-  - scikit-learn >= 1.0.0
-  - sentence-transformers >= 2.2.0
-  - datasets >= 2.0.0
-  - torch >= 1.9.0
-
+  - pandas>=1.3.0
+  - numpy>=1.21.0
+  - matplotlib>=3.4.0
+  - seaborn>=0.11.0
+  - scikit-learn>=1.0.0
+  - sentence-transformers>=2.2.0
+  - transformers>=4.5.0
+  - datasets>=1.11.0
+  - evaluate==0.4.3
+  - torch>=1.9.0
 ## Installation
 
 1. Clone the repository:
@@ -67,11 +68,12 @@ The project consists of two main Python scripts:
 
 1. `news_classifier.py`: The clearer implementation with a command-line interface (results maybe different than these in Google Colab due to package version difference, random seed, and batching)
 2. `fake_real_news.py`: Google Colab implementation with detailed analysis (we use the results from here for the report and poster)
-
+3. `distilBERT.py`: The DistilBERT model implementation for our new benchmark can be run on Google Colab or submitted to GreatLakes via a SLURM script.
 ### Running the Classifier
 
 ```bash
 python news_classifier.py --sampling [none|undersample|oversample] --features [tfidf|sentence_transformer] --model [logistic_regression|svm|random_forest]
+python distilBERT.py
 ```
 
 ### Command Line Arguments
