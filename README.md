@@ -123,7 +123,7 @@ Logistic_Regression_tfidf_embed_metrics.png\
 SVM_tfidf_embed_metrics.png\
 ![image](SVM_tfidf_embed_metrics.png)
 
-Random_Forest_tfidf_embed_metrics.pdf\
+Random_Forest_tfidf_embed_metrics.png\
 ![image](Random_Forest_tfidf_embed_metrics.png)
 
 Each file contains comparative bar charts for model performance.
