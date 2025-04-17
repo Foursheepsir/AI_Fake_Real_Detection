@@ -70,8 +70,8 @@ def main():
     
     # Step 1: Load original datasets
     print("Loading and preprocessing datasets...")
-    df_fake = pd.read_csv('Fake.csv')
-    df_true = pd.read_csv('True.csv')
+    df_fake = pd.read_csv('fake.csv')
+    df_true = pd.read_csv('true.csv')
 
     # Drop unnecessary columns
     df_fake.drop(labels=['title', 'subject', 'date'], axis=1, inplace=True)

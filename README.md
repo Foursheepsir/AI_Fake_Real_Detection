@@ -50,6 +50,7 @@ This project implements a sophisticated news classification system that:
   - datasets>=1.11.0
   - evaluate==0.4.3
   - torch>=1.9.0
+  - accelerate>=0.26.0
 ## Installation
 
 1. Clone the repository:
@@ -67,9 +68,10 @@ pip install -r requirements.txt
 
 The project consists of two main Python scripts:
 
-1. `news_classifier.py`: The clearer implementation with a command-line interface (results maybe different than these in Google Colab due to package version difference, random seed, and batching)
-2. `fake_real_news.py`: Google Colab implementation with detailed analysis (we use the results from here for the report and poster)
+1. `fake_real_news.py`: Google Colab implementation with detailed analysis (we use the results from here for the report and poster)
+2. `news_classifier.py`: The clearer implementation with a command-line interface (results maybe different than these in Google Colab due to package version difference, random seed, and batching)
 3. `distilBERT.py`: The DistilBERT model implementation for our new benchmark can be run on Google Colab or submitted to GreatLakes via a SLURM script.
+
 ### Running the Classifier
 
 ```bash
@@ -77,7 +79,7 @@ python news_classifier.py --sampling [none|undersample|oversample] --features [t
 python distilBERT.py
 ```
 
-### Command Line Arguments
+### Command Line Arguments for news_classifier.py
 
 - `--sampling`: Choose sampling method
   - `none`: No sampling
@@ -95,9 +97,9 @@ python distilBERT.py
 
 ## Data Sources
 
-The system uses three main data sources:
-1. Local CSV files (`true.csv` and `fake.csv`)
-2. Neural News Benchmark dataset from HuggingFace
+The system uses two main data sources:
+1. ISOT dataset in local CSV files (`true.csv` and `fake.csv`).
+2. Neural News Benchmark dataset loaded in code from HuggingFace.
 
 ## Results
 
@@ -107,8 +109,11 @@ The system provides:
 - Confusion matrices
 - Visualizations of:
   - Text length distributions
+  ![image](text_length_distribution.png)
   - PCA projections
+  ![image](true_label_distribution.png)
   - KMeans clustering results
+  ![image](kmeans_clustering_results.png)
 
 ## Plot and Visualization
 Simply run the script
