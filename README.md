@@ -28,6 +28,7 @@ This project implements a sophisticated news classification system that:
   - Logistic Regression
   - Support Vector Machine (SVM)
   - Random Forest
+  - distilBERT model
 
 - **Data Analysis**
   - Text length distribution analysis
