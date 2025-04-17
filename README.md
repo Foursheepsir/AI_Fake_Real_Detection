@@ -65,8 +65,8 @@ pip install -r requirements.txt
 
 The project consists of two main Python scripts:
 
-1. `news_classifier.py`: The main implementation with a command-line interface
-2. `fake_real_news.py`: Alternative implementation with detailed analysis
+1. `news_classifier.py`: The clearer implementation with a command-line interface (results maybe different than these in Google Colab due to package version difference, random seed, and batching)
+2. `fake_real_news.py`: Google Colab implementation with detailed analysis (we use the results from here for the report and poster)
 
 ### Running the Classifier
 
